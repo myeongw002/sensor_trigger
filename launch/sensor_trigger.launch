@@ -1,0 +1,18 @@
+<launch>
+
+  <!--Parameters-->
+  <arg name="multiplier" value="3"/>
+  <arg name="duty_out" value="0.5"/> <!-- 0~1 -->
+  <arg name="offset_time" value="10000"/> <!-- micro seconds -->
+
+  
+  <!-- Declare the node -->
+  <node pkg="sensor_trigger" type="sensor_trigger_node" name="sensor_trigger"   output="screen">
+    <param name="multiplier" type="int" value="$(arg multiplier)"/>
+    <param name="duty_out" type="double" value="$(arg duty_out)"/>
+    <param name="offset_time" type="int" value="$(arg offset_time)"/>
+  </node>
+
+
+
+</launch>
